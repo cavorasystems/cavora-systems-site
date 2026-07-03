@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>Work — Case Studies | Cavora Systems</title>
+<meta name="description" content="Conversion websites, AI automation, and full digital stacks built for trades and service businesses. See what Cavora Systems has delivered." />
+<meta name="theme-color" content="#080808" />
+<link rel="canonical" href="https://cavorasystems.com/portfolio" />
+
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Cavora Systems" />
+<meta property="og:title" content="Work — Cavora Systems" />
+<meta property="og:description" content="Conversion websites, AI automation, and full digital stacks for trades and service businesses." />
+<meta property="og:image" content="https://cavorasystems.com/assets/img/poster3.jpg" />
+<meta property="og:url" content="https://cavorasystems.com/portfolio" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Work — Cavora Systems" />
+<meta name="twitter:description" content="Conversion websites, AI automation, and full digital stacks for trades and service businesses." />
+<meta name="twitter:image" content="https://cavorasystems.com/assets/img/poster3.jpg" />
+
+<link rel="icon" type="image/png" href="assets/img/favicon-128.png" />
+<link rel="apple-touch-icon" href="assets/img/favicon-128.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-6NTEMH7LNJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-6NTEMH7LNJ');
+</script>
+
+<style>
+  /* ── PORTFOLIO PAGE OVERRIDES ── */
+  body { cursor: default; }
+
+  .port-hero {
+    padding: clamp(140px, 18vw, 200px) clamp(24px, 6vw, 72px) clamp(80px, 10vw, 120px);
+    background: var(--black);
+    border-bottom: 1px solid var(--line);
+    position: relative;
+    overflow: hidden;
+  }
+  .port-hero::before {
+    content: '';
+    position: absolute;
+    top: -40%; right: -10%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(201,169,110,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .port-hero-inner { max-width: var(--maxw); margin: 0 auto; }
+  .port-hero-eyebrow {
+    font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 24px; display: flex; align-items: center; gap: 16px;
+  }
+  .port-hero-eyebrow::before { content: ''; display: block; width: 44px; height: 1px; background: var(--gold); opacity: .6; }
+  .port-hero h1 {
+    font-family: var(--serif); font-size: clamp(48px, 7vw, 96px); font-weight: 300;
+    line-height: 1.04; letter-spacing: -0.01em; color: var(--white); max-width: 860px;
+  }
+  .port-hero h1 em { font-style: italic; color: var(--gold); }
+  .port-hero-lead {
+    font-size: 15px; line-height: 1.9; color: var(--dim); max-width: 520px; margin-top: 32px;
+  }
+
+  /* ── CASE STUDY GRID ── */
+  .port-section {
+    background: var(--near); padding: clamp(80px, 10vw, 130px) clamp(24px, 6vw, 72px);
+  }
+  .port-inner { max-width: var(--maxw); margin: 0 auto; }
+
+  .case-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    margin-top: 64px;
+  }
+
+  .case-card {
+    background: rgba(201,169,110,0.03); border: 1px solid var(--line);
+    padding: clamp(40px, 5vw, 64px) clamp(32px, 4vw, 56px);
+    display: flex; flex-direction: column; gap: 0;
+    transition: background .4s, border-color .4s, transform .4s var(--ease);
+    position: relative; overflow: hidden;
+  }
+  .case-card::after {
+    content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+    height: 2px; background: linear-gradient(to right, var(--gold), var(--gold-bright));
+    transform: scaleX(0); transform-origin: left; transition: transform .5s var(--ease);
+  }
+  .case-card:hover { background: rgba(201,169,110,0.06); border-color: rgba(201,169,110,0.28); transform: translateY(-4px); }
+  .case-card:hover::after { transform: scaleX(1); }
+
+  .case-card.case-featured {
+    grid-column: span 2;
+    flex-direction: row; gap: clamp(40px, 5vw, 80px); align-items: flex-start;
+  }
+  .case-featured .case-text { flex: 1; }
+  .case-featured .case-result { flex-shrink: 0; text-align: right; }
+
+  .case-tag {
+    display: inline-block; font-size: 10px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--gold); border: 1px solid rgba(201,169,110,0.3); padding: 5px 14px;
+    border-radius: 2px; margin-bottom: 28px;
+  }
+  .case-index {
+    font-family: var(--serif); font-size: 13px; color: var(--gold); opacity: .4;
+    letter-spacing: 0.2em; margin-bottom: 20px;
+  }
+  .case-title {
+    font-family: var(--serif); font-size: clamp(24px, 3vw, 38px); font-weight: 300;
+    color: var(--white); line-height: 1.15; margin-bottom: 18px;
+  }
+  .case-title em { font-style: italic; color: var(--gold); }
+  .case-body { font-size: 14px; line-height: 1.85; color: var(--dim); margin-bottom: 36px; }
+
+  .case-tags-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 36px; }
+  .case-pill {
+    font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--faint); border: 1px solid rgba(245,240,232,0.1); padding: 4px 12px;
+    border-radius: 2px;
+  }
+
+  .case-metrics { display: flex; gap: clamp(28px, 4vw, 52px); }
+  .case-metric-num {
+    font-family: var(--serif); font-size: clamp(32px, 4vw, 52px); font-weight: 300;
+    color: var(--gold); line-height: 1; margin-bottom: 8px;
+  }
+  .case-metric-label { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--dim); }
+
+  .case-result {
+    display: flex; flex-direction: column; gap: 32px; justify-content: center;
+  }
+
+  /* "More coming" placeholder card */
+  .case-card-soon {
+    border-style: dashed; border-color: rgba(201,169,110,0.12);
+    background: transparent; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center;
+    min-height: 260px; gap: 16px;
+  }
+  .case-card-soon:hover { transform: none; background: rgba(201,169,110,0.02); border-color: rgba(201,169,110,0.2); }
+  .case-card-soon::after { display: none; }
+  .case-soon-icon { font-size: 28px; color: var(--gold); opacity: .35; font-family: var(--serif); }
+  .case-soon-text { font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--faint); }
+
+  /* ── BOTTOM CTA ── */
+  .port-cta {
+    background: var(--black); padding: clamp(80px, 12vw, 140px) clamp(24px, 6vw, 72px);
+    border-top: 1px solid var(--line); text-align: center;
+    position: relative; overflow: hidden;
+  }
+  .port-cta::before {
+    content: '';
+    position: absolute; bottom: -30%; left: 50%; transform: translateX(-50%);
+    width: 700px; height: 400px;
+    background: radial-gradient(ellipse, rgba(201,169,110,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .port-cta-inner { position: relative; max-width: 620px; margin: 0 auto; }
+  .port-cta h2 {
+    font-family: var(--serif); font-size: clamp(36px, 5vw, 64px); font-weight: 300;
+    line-height: 1.1; color: var(--white); margin-bottom: 20px;
+  }
+  .port-cta h2 em { font-style: italic; color: var(--gold); }
+  .port-cta p { font-size: 15px; line-height: 1.85; color: var(--dim); margin-bottom: 40px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 860px) {
+    .case-grid { grid-template-columns: 1fr; }
+    .case-card.case-featured { grid-column: span 1; flex-direction: column; gap: 36px; }
+    .case-featured .case-result { text-align: left; }
+    .case-metrics { gap: 28px; }
+  }
+</style>
+</head>
+<body data-page="portfolio">
+
+<div class="grain" aria-hidden="true"></div>
+<div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav id="main-nav" aria-label="Main navigation">
+  <a href="/" class="nav-logo">Cavora<span>Systems</span></a>
+  <ul class="nav-links">
+    <li><a href="portfolio.html" aria-current="page">Work</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#process">Process</a></li>
+    <li><a href="/#why">Why Cavora</a></li>
+  </ul>
+  <a href="/#contact" class="nav-cta">Book a Call</a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+  <ul>
+    <li><a href="portfolio.html">Work</a></li>
+    <li><a href="/#services">Services</a></li>
+    <li><a href="/#process">Process</a></li>
+    <li><a href="/#why">Why Cavora</a></li>
+    <li><a href="/#contact" class="m-cta">Book a Call</a></li>
+  </ul>
+</div>
+
+<main id="main-content">
+
+<!-- ── HERO ── -->
+<div class="port-hero">
+  <div class="port-hero-inner">
+    <p class="port-hero-eyebrow">Case Studies</p>
+    <h1>The work that<br/><em>speaks for itself.</em></h1>
+    <p class="port-hero-lead">Every system we build is custom — engineered to convert, built to last, and designed to make the competition look like an afterthought.</p>
+  </div>
+</div>
+
+<!-- ── CASE STUDIES ── -->
+<section class="port-section" id="case-studies" aria-labelledby="case-studies-heading">
+  <div class="port-inner">
+    <p class="section-eyebrow">Recent Work</p>
+    <h2 class="section-headline" id="case-studies-heading">Built for businesses<br/>that <em>mean business.</em></h2>
+
+    <div class="case-grid">
+
+      <!-- FEATURED CASE STUDY 01 -->
+      <div class="case-card case-featured">
+        <div class="case-text">
+          <div class="case-index">01</div>
+          <span class="case-tag">Plumbing &amp; HVAC</span>
+          <h3 class="case-title">From zero web presence<br/>to <em>fully booked.</em></h3>
+          <p class="case-body">A Victoria plumbing company had no website, no online reviews, and was losing jobs to competitors with half the quality. We built a cinematic conversion site, wired up a missed-call AI responder, and deployed automated review collection — all in under a week.</p>
+          <div class="case-tags-row">
+            <span class="case-pill">Conversion Website</span>
+            <span class="case-pill">AI Receptionist</span>
+            <span class="case-pill">Review Automation</span>
+            <span class="case-pill">Google Business</span>
+          </div>
+        </div>
+        <div class="case-result">
+          <div>
+            <div class="case-metric-num">48<span style="font-size:.5em;color:var(--gold-bright)">h</span></div>
+            <div class="case-metric-label">Launch time</div>
+          </div>
+          <div>
+            <div class="case-metric-num">3×</div>
+            <div class="case-metric-label">Lead volume in 60 days</div>
+          </div>
+          <div>
+            <div class="case-metric-num">0</div>
+            <div class="case-metric-label">Missed calls</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE STUDY 02 -->
+      <div class="case-card">
+        <div class="case-index">02</div>
+        <span class="case-tag">Electrical Contractor</span>
+        <h3 class="case-title">AI follow-up that<br/><em>never sleeps.</em></h3>
+        <p class="case-body">An electrical contractor was losing leads after hours. We built a 24/7 AI lead-capture and follow-up system — every inquiry gets an instant response, a quote request, and a calendar booking link. The owner wakes up to filled jobs.</p>
+        <div class="case-tags-row">
+          <span class="case-pill">AI Lead Agent</span>
+          <span class="case-pill">Calendar Booking</span>
+          <span class="case-pill">CRM Integration</span>
+        </div>
+        <div class="case-metrics">
+          <div>
+            <div class="case-metric-num">100<span style="font-size:.5em;color:var(--gold-bright)">%</span></div>
+            <div class="case-metric-label">After-hours leads captured</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE STUDY 03 -->
+      <div class="case-card">
+        <div class="case-index">03</div>
+        <span class="case-tag">Landscaping</span>
+        <h3 class="case-title">A full digital stack<br/><em>from scratch.</em></h3>
+        <p class="case-body">A landscaping company doing solid work but running on word-of-mouth alone. We built their entire digital infrastructure — website, CRM, booking system, payments, and an AI receptionist — so they could focus on the work, not the admin.</p>
+        <div class="case-tags-row">
+          <span class="case-pill">Full Digital Stack</span>
+          <span class="case-pill">Online Booking</span>
+          <span class="case-pill">Payments</span>
+          <span class="case-pill">AI Receptionist</span>
+        </div>
+        <div class="case-metrics">
+          <div>
+            <div class="case-metric-num">1</div>
+            <div class="case-metric-label">Week to full operation</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- COMING SOON CARD -->
+      <div class="case-card case-card-soon">
+        <div class="case-soon-icon">✦</div>
+        <p class="case-soon-text">More work dropping soon</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── BOTTOM CTA ── -->
+<section class="port-cta" aria-labelledby="port-cta-heading">
+  <div class="port-cta-inner">
+    <p class="section-eyebrow" style="margin-bottom:24px">Your business, next</p>
+    <h2 id="port-cta-heading">Ready to be the<br/><em>next case study?</em></h2>
+    <p>We work with a select number of clients. Tell us about your business and let's see if we're a fit.</p>
+    <a href="/#contact" class="nav-cta" style="display:inline-block;font-size:13px;padding:16px 40px;letter-spacing:0.2em">Start the Conversation</a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-brand">
+    <div class="footer-logo">Cavora<span>Systems</span></div>
+    <p>Cinematic websites, AI agents &amp; automation. Victoria, British Columbia.</p>
+  </div>
+  <div class="footer-meta">
+    <a href="mailto:casey@cavorasystems.com">casey@cavorasystems.com</a>
+    <span class="footer-copy">© <span id="year">2026</span> Cavora Systems. Victoria, BC.</span>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /* nav scroll */
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
+
+  /* mobile menu */
+  const toggle = document.getElementById('nav-toggle');
+  const menu   = document.getElementById('mobile-menu');
+  toggle.addEventListener('click', () => {
+    const open = document.body.classList.toggle('menu-open');
+    toggle.setAttribute('aria-expanded', open);
+    menu.setAttribute('aria-hidden', !open);
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    document.body.classList.remove('menu-open');
+    toggle.setAttribute('aria-expanded', false);
+    menu.setAttribute('aria-hidden', true);
+  }));
+
+  /* cursor dot */
+  const dot = document.getElementById('cursor-dot');
+  document.addEventListener('mousemove', e => {
+    dot.style.left = e.clientX + 'px';
+    dot.style.top  = e.clientY + 'px';
+    dot.classList.add('active');
+  });
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => dot.classList.add('hover'));
+    el.addEventListener('mouseleave', () => dot.classList.remove('hover'));
+  });
+</script>
+</body>
+</html>
