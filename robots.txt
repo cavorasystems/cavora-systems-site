@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://cavorasystems.com/sitemap.xml

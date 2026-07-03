@@ -14,13 +14,48 @@
 <meta property="og:site_name" content="Cavora Systems" />
 <meta property="og:title" content="Cavora Systems — Your business, rewired." />
 <meta property="og:description" content="Cinematic conversion websites, AI agents, and automation for businesses that are serious about growth." />
-<meta property="og:image" content="assets/img/poster3.jpg" />
+<meta property="og:image" content="https://cavorasystems.com/assets/img/poster3.jpg" />
+<meta property="og:url" content="https://cavorasystems.com/" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Cavora Systems — Your business, rewired." />
+<meta name="twitter:description" content="Cinematic conversion websites, AI agents, and automation for businesses that are serious about growth." />
+<meta name="twitter:image" content="https://cavorasystems.com/assets/img/poster3.jpg" />
 
 <link rel="icon" type="image/png" href="assets/img/favicon-128.png" />
+<link rel="apple-touch-icon" href="assets/img/favicon-128.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="css/styles.css" />
+
+<!-- Local business structured data for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Cavora Systems",
+  "url": "https://cavorasystems.com",
+  "email": "casey@cavorasystems.com",
+  "description": "Cinematic conversion websites, AI automation agents, and full digital stacks for trades and service businesses.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Victoria",
+    "addressRegion": "BC",
+    "addressCountry": "CA"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Digital Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conversion Websites" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Automation" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Digital Stack" } }
+    ]
+  }
+}
+</script>
 </head>
 <body class="is-loading" data-page="home">
 
@@ -29,7 +64,7 @@
 <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
 
 <!-- NAV -->
-<nav id="main-nav">
+<nav id="main-nav" aria-label="Main navigation">
   <a href="#top" class="nav-logo">Cavora<span>Systems</span></a>
   <ul class="nav-links">
     <li><a href="#work">Work</a></li>
@@ -51,18 +86,20 @@
   </ul>
 </div>
 
+<main id="main-content">
 <span id="top"></span>
 
 <!-- ── SCROLLYTELL HERO ── -->
 <div id="scroll-container">
   <div id="video-stage">
-    <video class="video-layer" id="clip1" muted playsinline preload="auto" poster="assets/img/poster1.jpg">
+    <!-- preload="metadata" loads only duration/poster on page load; JS switches desktop to "auto" for scrubbing -->
+    <video class="video-layer" id="clip1" muted playsinline preload="metadata" poster="assets/img/poster1.jpg">
       <source src="assets/video/clip1-street.mp4" type="video/mp4" />
     </video>
-    <video class="video-layer" id="clip2" muted playsinline preload="auto" poster="assets/img/poster2.jpg">
+    <video class="video-layer" id="clip2" muted playsinline preload="metadata" poster="assets/img/poster2.jpg">
       <source src="assets/video/clip2-neurons.mp4" type="video/mp4" />
     </video>
-    <video class="video-layer" id="clip3" muted playsinline preload="auto" poster="assets/img/poster3.jpg">
+    <video class="video-layer" id="clip3" muted playsinline preload="metadata" poster="assets/img/poster3.jpg">
       <source src="assets/video/clip3-logo.mp4" type="video/mp4" />
     </video>
 
@@ -106,10 +143,10 @@
 </div>
 
 <!-- ── WORK ── -->
-<section class="section" id="work">
+<section class="section" id="work" aria-labelledby="work-heading">
   <div class="section-inner">
     <p class="section-eyebrow reveal">What We Build</p>
-    <h2 class="section-headline reveal">Done-for-you digital<br/>infrastructure that <em>performs.</em></h2>
+    <h2 class="section-headline reveal" id="work-heading">Done-for-you digital<br/>infrastructure that <em>performs.</em></h2>
     <div class="section-rule reveal"></div>
     <p class="section-lead reveal">From the first impression to the last touchpoint — websites, AI agents, and automation systems built for trades businesses and service companies who are serious about growth.</p>
     <div class="stats-row">
@@ -121,10 +158,10 @@
 </section>
 
 <!-- ── SERVICES ── -->
-<section class="section section-services" id="services">
+<section class="section section-services" id="services" aria-labelledby="services-heading">
   <div class="section-inner">
     <p class="section-eyebrow reveal">Services</p>
-    <h2 class="section-headline reveal">Everything your business<br/>needs to <em>dominate.</em></h2>
+    <h2 class="section-headline reveal" id="services-heading">Everything your business<br/>needs to <em>dominate.</em></h2>
     <div class="services-grid">
       <div class="service-card reveal">
         <div class="service-number">01</div>
@@ -146,10 +183,10 @@
 </section>
 
 <!-- ── PROCESS ── -->
-<section class="section section-process" id="process">
+<section class="section section-process" id="process" aria-labelledby="process-heading">
   <div class="section-inner">
     <p class="section-eyebrow reveal">How We Work</p>
-    <h2 class="section-headline reveal">From first call to<br/><em>fully automated.</em></h2>
+    <h2 class="section-headline reveal" id="process-heading">From first call to<br/><em>fully automated.</em></h2>
     <div class="process-list">
       <div class="process-step reveal">
         <div class="process-index">01</div>
@@ -172,11 +209,11 @@
 </section>
 
 <!-- ── WHY CAVORA ── -->
-<section class="section section-why" id="why">
+<section class="section section-why" id="why" aria-labelledby="why-heading">
   <div class="section-inner why-grid">
     <div class="why-left reveal">
       <p class="section-eyebrow">Why Cavora</p>
-      <h2 class="section-headline">Built for the businesses<br/>that <em>actually do the work.</em></h2>
+      <h2 class="section-headline" id="why-heading">Built for the businesses<br/>that <em>actually do the work.</em></h2>
       <p class="section-lead">Trades and service companies don't need another agency selling buzzwords. They need infrastructure that books jobs and runs itself. That's all we build.</p>
       <a href="#contact" class="text-link">Start the conversation →</a>
     </div>
@@ -189,14 +226,36 @@
   </div>
 </section>
 
-<!-- ── CTA ── -->
-<section class="cta-section" id="contact">
+<!-- ── CTA / CONTACT ── -->
+<section class="cta-section" id="contact" aria-labelledby="contact-heading">
   <div class="cta-glow" aria-hidden="true"></div>
   <p class="section-eyebrow reveal" style="text-align:center">Let's Build</p>
-  <h2 class="cta-headline reveal">Ready to evolve<br/>your <em>business?</em></h2>
+  <h2 class="cta-headline reveal" id="contact-heading">Ready to evolve<br/>your <em>business?</em></h2>
   <p class="cta-sub reveal">We work with a select number of clients. Tell us about your business and let's see if you're a fit.</p>
-  <a class="cta-btn reveal" href="mailto:casey@cavorasystems.com?subject=Cavora%20Systems%20—%20New%20Project">Start the Conversation</a>
+  <!-- SETUP REQUIRED: Go to formspree.io → sign up free → New Form → copy your form ID → replace YOUR_FORM_ID below -->
+  <form class="contact-form reveal" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <div class="form-row">
+      <div class="form-field">
+        <label for="cf-name">Your Name</label>
+        <input type="text" id="cf-name" name="name" placeholder="John Smith" required />
+      </div>
+      <div class="form-field">
+        <label for="cf-email">Email Address</label>
+        <input type="email" id="cf-email" name="email" placeholder="john@yourbusiness.com" required />
+      </div>
+    </div>
+    <div class="form-field">
+      <label for="cf-business">Business Name</label>
+      <input type="text" id="cf-business" name="business" placeholder="Smith Plumbing Ltd." />
+    </div>
+    <div class="form-field">
+      <label for="cf-message">Tell us about your business</label>
+      <textarea id="cf-message" name="message" rows="4" placeholder="What you do, what's not working, and what success looks like." required></textarea>
+    </div>
+    <button type="submit" class="cta-btn form-submit">Start the Conversation</button>
+  </form>
 </section>
+</main>
 
 <footer>
   <div class="footer-brand">

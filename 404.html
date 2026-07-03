@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>404 — Page Not Found | Cavora Systems</title>
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/png" href="assets/img/favicon-128.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --gold: #C9A96E; --black: #080808; --white: #F5F0E8; --dim: rgba(245,240,232,0.58);
+    --serif: 'Cormorant Garamond', Georgia, serif; --sans: 'Inter', system-ui, sans-serif;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  body {
+    background: var(--black); color: var(--white); font-family: var(--sans);
+    font-weight: 300; min-height: 100vh; display: flex; align-items: center;
+    justify-content: center; text-align: center; padding: 40px 24px;
+  }
+  .wrap { max-width: 480px; }
+  .code {
+    font-family: var(--serif); font-size: clamp(80px, 20vw, 140px); font-weight: 300;
+    color: var(--gold); line-height: 1; opacity: 0.4; margin-bottom: 24px;
+  }
+  h1 {
+    font-family: var(--serif); font-size: clamp(28px, 5vw, 42px); font-weight: 300;
+    line-height: 1.2; margin-bottom: 20px;
+  }
+  h1 em { font-style: italic; color: var(--gold); }
+  p { font-size: 15px; color: var(--dim); line-height: 1.8; margin-bottom: 40px; }
+  a {
+    display: inline-block; padding: 16px 48px; border: 1px solid var(--gold);
+    color: var(--gold); font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+    text-decoration: none; transition: background .3s, color .3s;
+  }
+  a:hover { background: var(--gold); color: var(--black); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="code">404</div>
+    <h1>This page has <em>evolved</em> elsewhere.</h1>
+    <p>The page you're looking for doesn't exist. It may have moved, or the link might be wrong.</p>
+    <a href="/">Back to Cavora Systems</a>
+  </div>
+</body>
+</html>

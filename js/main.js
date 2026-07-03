@@ -3,7 +3,7 @@
   const $ = (s, c = document) => c.querySelector(s);
   const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const isMobile = matchMedia('(pointer: coarse)').matches || innerWidth <= 860;
+  const isMobile = matchMedia('(pointer: coarse)').matches;
 
   addEventListener('load', () => document.body.classList.remove('is-loading'));
   setTimeout(() => document.body.classList.remove('is-loading'), 1500);
@@ -20,10 +20,11 @@
   const clamp = (v, lo, hi) => Math.max(lo, Math.min(hi, v));
   const show = (el, on) => el && el.classList.toggle('visible', on);
 
-  clips.forEach((v) => { try { v.load(); } catch (e) {} });
-
   /* ─────────────────────────── DESKTOP: scroll-scrub ─────────────────────────── */
   function initScrub() {
+    // Switch all clips to full preload now that we know this is a pointer device
+    clips.forEach((v) => { v.preload = 'auto'; try { v.load(); } catch (e) {} });
+
     const SCRUB_VH = 500;
     let ticking = false;
 
